@@ -6,10 +6,11 @@
   the string '7 green' would go to {:g 7}"
   [col]
   (let [[numstr colour] (str/split col #" ")
-        num (Integer/parseInt numstr)]
-    (cond (= colour "green") {:g num}
-          (= colour "red") {:r num}
-          (= colour "blue") {:b num})))
+        num (parse-long numstr)]
+    (case colour
+      "green" {:g num}
+      "red" {:r num}
+      "blue" {:b num})))
 
 (defn parse-hand
   "Map a hand (i.e. a list of strings) to a map representing
@@ -17,8 +18,8 @@
   don't appear in the hand, e.g. '7 green, 2 blue' would map
   to {:r 0 :g 7 :b 2}"
   [hand]
-  (def defaults {:r 0 :g 0 :b 0})
-  (apply merge (conj (map parse-col hand) defaults)))
+  (let [defaults {:r 0 :g 0 :b 0}]
+    (apply merge (conj (map parse-col hand) defaults))))
 
 (defn parse-game
   "Given an enumerated line string, return a data structure of
