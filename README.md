@@ -34,3 +34,9 @@ representing the salient information, the logic is very trivial to write
 Sod doing docstrings (already!), slightly fiddlier to build up the data
 structure representing the totals for part 2 but came out quite nice in
 the end.
+
+### Day 6
+
+Surprisingly easy logic today compared to the previous days - although I
+imagine the solution would have been decently longer if I'd done the table
+parsing properly.
