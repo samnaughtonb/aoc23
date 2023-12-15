@@ -28,3 +28,9 @@ in Clojure. The `clojure.string.split` function is very useful for parsing
 the input data, but once you have a data structure in the Clojure world
 representing the salient information, the logic is very trivial to write
 (see the `maximal-hand` and `valid-bag?` functions.)
+
+### Day 4
+
+Sod doing docstrings (already!), slightly fiddlier to build up the data
+structure representing the totals for part 2 but came out quite nice in
+the end.
