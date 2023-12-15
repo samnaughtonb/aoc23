@@ -1,4 +1,4 @@
-(ns day1
+(ns aoc23.day1
   (:require [clojure.string :as str]))
 
 (defn first-posn
